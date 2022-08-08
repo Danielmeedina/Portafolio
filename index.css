@@ -1,0 +1,225 @@
+/* CSS BODY */
+:root{
+  --font-main: calc(2em + 2vw);
+  --font-title: calc(1.5em + 1vw);
+  --font-text: 14px;
+  --primary-color: rgba(9, 9, 31, 1); 
+  --secondary-color: rgba(44, 43, 44, 0.384) ;
+  --letter-color: #ffffff;
+  --color-title: rgb(190, 4, 4);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body{
+  color: var(--letter-color);
+  background-color: var(--primary-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* CSS PARA NAV */
+.nav{
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-logo{
+  margin-left: 15px;
+}
+
+.nav-links{
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 15px;
+}
+
+.nav-links a{
+  background-color: transparent;
+  color: white;
+  padding: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover{
+  background-color: rgba(7, 7, 27,1) ;
+  border-bottom: 2px solid var(--color-title);
+}
+
+/* CSS ABOUT */
+
+#about{
+  min-height: 100vh;
+  padding: 10px;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: url(https://imgs.search.brave.com/zYtV_FT2sCiQrMFf6eAv2TUr1KlE5rKE8hkkFtx1niY/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDcyMjQy/NzAuanBn);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#about::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(253, 249, 249, 0), rgba(253, 249, 249, 0.210), rgba(7, 7, 27, 0.671),rgba(7, 7, 27, 0.823), rgba(9, 9, 31, 1));
+}
+
+.about-container{
+  width: 1100px;
+  min-width: 300px;
+  height: 350px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background:  rgba(44, 43, 44, 0.479);
+  background: radial-gradient(circle, rgba(44, 43, 44, 0.479)  60%, transparent 80%);
+  align-items: center;
+  flex-flow: column nowrap;
+  z-index: 4;
+}
+
+.about-container h1{
+  font-size: var(--font-main)
+}
+
+.about-container h2{
+  padding-top: 20px;
+  font-size: 23px;
+  color: var(--color-title);
+}
+
+
+
+
+/* CSS PROJECTSS */
+#projects{
+  min-height: 100vh;
+  padding: 40px 0;
+  width: 100%;
+  text-align: center;
+}
+
+#projects h2{
+  font-size: var(--font-title);
+  color: var(--color-title);
+}
+
+.contenedor-projectos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 350px) );
+  padding: 40px 20px;
+  grid-gap: 40px;
+  justify-content: center;
+}
+
+.card{
+  background-color: rgb(43, 42, 42);
+  border-radius: 20px;
+}
+
+.container{
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.container img{
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.container::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details h3{
+  color: var(--color-title);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container-icons{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.container-icons figure:hover{
+  transform: scale(1.3);
+}
+
+.icon{
+  padding: 18px;
+  padding-bottom: 0;
+}
+
+.container-icons figcaption{
+  padding-top: 5px;
+}
+
+.container-buttons{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px;
+}
+
+.container-buttons button{
+  background-color: slategrey;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.container-buttons button:hover{
+  transform: scale(1.1);
+}
+
+/* CSS CONTACT */
+
+#contact{
+  min-height: 100vh;
+  padding: 40px 0;
+  width: 100%;
+  text-align: center;
+}
