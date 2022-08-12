@@ -5,112 +5,295 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f897a5b00.js" crossorigin="anonymous"></script>
   <title>Portafolio</title>
 </head>
 <body>
   <nav class="nav">
-    <div>
-      <img class="nav-logo" src="#" alt="Logo" title="Logo"></img>
+    <div class="nav-logo">
+      <a href="#about"><img src="https://imgs.search.brave.com/-KkZe3qmqmVlxskcmw_2SpoILro7je663B6fRaf3o0I/rs:fit:403:491:1/g:ce/aHR0cDovL2NkbjEz/MC5waWNzYXJ0LmNv/bS8yNjE1ODQ4OTUw/MTIyMTIucG5n" alt="Logo" title="Logo"></img></a>
     </div>  
     <div class="nav-links">
-      <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+    </div>  
+    <div class="nav-links-mini">
+      <button><i class="fa-solid fa-bars-staggered fa-2x mostrar"></i></button>
     </div>
   </nav>
+  <aside class="panel">
+      <div class="link-mini">
+        <a href="#about">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+  </aside>
   <section id="about">
     <div class="about-container">
         <h1>Daniel Medina</h1>
-        <h2>Frontend Developer</h2>
+        <h2>Frontend Developer jr</h2>
     </div>
   </section>
   
   <seccion id="projects">
-    <h2>MY PROJECTS</h2>
-    <div class='contenedor-projectos'>
+    <h2>MY PROJECTS ✔</h2>
+    <div class="card-container">
       <div class="card">
-        <div class="container">
-          <img src="https://imgs.search.brave.com/BD-hrU83cM0k91ep5CxyTFuXIutaIdhW0_pq91h45p4/rs:fit:1200:1200:1/g:ce/aHR0cDovL2hkcXdh/bGxzLmNvbS93YWxs/cGFwZXJzLzRrLWtl/bi1rYW5la2ktdG9r/eW8tZ2hvdWwtN3cu/anBn" alt="">
+        <div class="card-img">
+          <img src="img/todoList.png" alt="todo list image">
         </div>
         <div class="details">
-          <h3>Titulo</h3>
+          <h3>To do App</h3>
           <div class="container-icons">
             <figure>
-              <img src="img/html.png" alt="Html icon" title="Html" class="icon" />
-              <figcaption>Html</figcaption>
+              <img src="icons/react.png" alt="React icon" title="React" class="icon" />
+              <figcaption>React</figcaption>
             </figure>
             <figure>
-              <img src="img/css.png" alt="Css icon" title="Css" class="icon" />
-              <figcaption>Css</figcaption>
-            </figure>
-            <figure>
-              <img src="img/js.png" alt="js icon" title="Javascript" class="icon" />
+              <img src="icons/js.png" alt="js icon" title="Javascript" class="icon" />
               <figcaption>Js</figcaption>
             </figure>
           </div>
           <div class="container-buttons">
-            <button>code 📃</button>
-            <button>view 💻</button>
+            <a href="https://github.com/Danielmeedina/to-do-app" target="_blank" rel="noopener"><button>code 📃</button></a>
+            <a href="https://to-do-app345.netlify.app" target="_blank" rel="noopener"><button>view 💻</button></a>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="container">
-          <img src="https://imgs.search.brave.com/BD-hrU83cM0k91ep5CxyTFuXIutaIdhW0_pq91h45p4/rs:fit:1200:1200:1/g:ce/aHR0cDovL2hkcXdh/bGxzLmNvbS93YWxs/cGFwZXJzLzRrLWtl/bi1rYW5la2ktdG9r/eW8tZ2hvdWwtN3cu/anBn" alt="">
+        <div class="card-img">
+          <img src="https://imgs.search.brave.com/ls9cpmjI-43Z6rLPM1t_qFuesnQe7FK0y4NQVHB2Q4w/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDUxMjI3/OTguanBn" alt="">
         </div>
         <div class="details">
           <h3>Titulo</h3>
           <div class="container-icons">
             <figure>
-              <img src="img/html.png" alt="Html icon" title="Html" class="icon" />
+              <img src="icons/html.png" alt="Html icon" title="Html" class="icon" />
               <figcaption>Html</figcaption>
             </figure>
             <figure>
-              <img src="img/css.png" alt="Css icon" title="Css" class="icon" />
+              <img src="icons/css.png" alt="Css icon" title="Css" class="icon" />
               <figcaption>Css</figcaption>
             </figure>
             <figure>
-              <img src="img/js.png" alt="js icon" title="Javascript" class="icon" />
+              <img src="icons/js.png" alt="js icon" title="Javascript" class="icon" />
               <figcaption>Js</figcaption>
             </figure>
           </div>
-        </div>
-        <div class="container-buttons">
-          <button>code 📃</button>
-          <button>view 💻</button>
+          <div class="container-buttons">
+            <a href="" target="_blank" rel="noopener"><button>code 📃</button></a>
+            <a href="" target="_blank" rel="noopener"><button>view 💻</button></a>
+          </div>
         </div>
       </div>
       <div class="card">
-        <div class="container">
-          <img src="https://imgs.search.brave.com/BD-hrU83cM0k91ep5CxyTFuXIutaIdhW0_pq91h45p4/rs:fit:1200:1200:1/g:ce/aHR0cDovL2hkcXdh/bGxzLmNvbS93YWxs/cGFwZXJzLzRrLWtl/bi1rYW5la2ktdG9r/eW8tZ2hvdWwtN3cu/anBn" alt="">
+        <div class="card-img">
+          <img src="https://imgs.search.brave.com/iiu7qjNd_HDxOcseFkAi6ZNpndVSYaOIxjgBrTyzjCo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYyODkw/NDMuanBn" alt="">
         </div>
         <div class="details">
           <h3>Titulo</h3>
           <div class="container-icons">
             <figure>
-              <img src="img/html.png" alt="Html icon" title="Html" class="icon" />
+              <img src="icons/html.png" alt="Html icon" title="Html" class="icon" />
               <figcaption>Html</figcaption>
             </figure>
             <figure>
-              <img src="img/css.png" alt="Css icon" title="Css" class="icon" />
+              <img src="icons/css.png" alt="Css icon" title="Css" class="icon" />
               <figcaption>Css</figcaption>
             </figure>
             <figure>
-              <img src="img/js.png" alt="js icon" title="Javascript" class="icon" />
+              <img src="icons/js.png" alt="js icon" title="Javascript" class="icon" />
               <figcaption>Js</figcaption>
             </figure>
           </div>
+          <div class="container-buttons">
+            <a href="" target="_blank" rel="noopener"><button>code 📃</button></a>
+            <a href="" target="_blank" rel="noopener"><button>view 💻</button></a>
+          </div>
         </div>
-        <div class="container-buttons">
-          <button>code 📃 </button>
-          <button>view 💻</button>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://imgs.search.brave.com/iiu7qjNd_HDxOcseFkAi6ZNpndVSYaOIxjgBrTyzjCo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYyODkw/NDMuanBn" alt="">
+        </div>
+        <div class="details">
+          <h3>Titulo</h3>
+          <div class="container-icons">
+            <figure>
+              <img src="icons/html.png" alt="Html icon" title="Html" class="icon" />
+              <figcaption>Html</figcaption>
+            </figure>
+            <figure>
+              <img src="icons/css.png" alt="Css icon" title="Css" class="icon" />
+              <figcaption>Css</figcaption>
+            </figure>
+            <figure>
+              <img src="icons/js.png" alt="js icon" title="Javascript" class="icon" />
+              <figcaption>Js</figcaption>
+            </figure>
+          </div>
+          <div class="container-buttons">
+            <a href="" target="_blank" rel="noopener"><button>code 📃</button></a>
+            <a href="" target="_blank" rel="noopener"><button>view 💻</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://imgs.search.brave.com/iiu7qjNd_HDxOcseFkAi6ZNpndVSYaOIxjgBrTyzjCo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYyODkw/NDMuanBn" alt="">
+        </div>
+        <div class="details">
+          <h3>Titulo</h3>
+          <div class="container-icons">
+            <figure>
+              <img src="icons/html.png" alt="Html icon" title="Html" class="icon" />
+              <figcaption>Html</figcaption>
+            </figure>
+            <figure>
+              <img src="icons/css.png" alt="Css icon" title="Css" class="icon" />
+              <figcaption>Css</figcaption>
+            </figure>
+            <figure>
+              <img src="icons/js.png" alt="js icon" title="Javascript" class="icon" />
+              <figcaption>Js</figcaption>
+            </figure>
+          </div>
+          <div class="container-buttons">
+            <a href="" target="_blank" rel="noopener"><button>code 📃</button></a>
+            <a href="" target="_blank" rel="noopener"><button>view 💻</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://imgs.search.brave.com/iiu7qjNd_HDxOcseFkAi6ZNpndVSYaOIxjgBrTyzjCo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYyODkw/NDMuanBn" alt="">
+        </div>
+        <div class="details">
+          <h3>Titulo</h3>
+          <div class="container-icons">
+            <figure>
+              <img src="icons/html.png" alt="Html icon" title="Html" class="icon" />
+              <figcaption>Html</figcaption>
+            </figure>
+            <figure>
+              <img src="icons/css.png" alt="Css icon" title="Css" class="icon" />
+              <figcaption>Css</figcaption>
+            </figure>
+            <figure>
+              <img src="icons/js.png" alt="js icon" title="Javascript" class="icon" />
+              <figcaption>Js</figcaption>
+            </figure>
+          </div>
+          <div class="container-buttons">
+            <a href="" target="_blank" rel="noopener"><button>code 📃</button></a>
+            <a href="" target="_blank" rel="noopener"><button>view 💻</button></a>
+          </div>
         </div>
       </div>
     </div>
   </seccion>
-  <seccion>
-    <h2 id="contact">CONTACTTT</h2>
 
-  </seccion>
+  <section id="skills">
+    <h2>MY SKILLS </h2>
+    <div class="skills-contenedor">
+      <div class="skill html">
+        <div class="skill-img">
+          <img src="icons/htmlGrande.png" alt="">
+        </div>
+        <div class="skill-text">
+          <h3>Html</h3>
+        </div>
+      </div>
+      <div class="skill css">
+        <div class="skill-img">
+          <img src="icons/cssGrande.png" alt="">
+        </div>
+        <div class="skill-text">
+          <h3>Css</h3>
+        </div>
+      </div>
+      <div class="skill js">
+        <div class="skill-img">
+          <img src="icons/jsGrande.png" alt="">
+        </div>
+        <div class="skill-text">
+          <h3>Javascript</h3>
+        </div>
+      </div>
+      <div class="skill react">
+        <div class="skill-img">
+          <img src="icons/reactGrande.png" alt="">
+        </div>
+        <div class="skill-text">
+          <h3>React</h3>
+        </div>
+      </div>
+      <div class="skill github">
+        <div class="skill-img">
+          <img src="icons/githubGrande.png" alt="">
+        </div>
+        <div class="skill-text">
+          <h3>Github</h3>
+        </div>
+      </div>
+      <div class="skill git">
+        <div class="skill-img">
+          <img src="icons/gitGrande.png" alt="">
+        </div>
+        <div class="skill-text">
+          <h3>Git</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-container">
+      <h2>CONTACT ME</h2>
+      <div class="container-contact">
+        <a href="https://fontawesome.com/icons/bars-staggered?s=solid" target="_blank">
+          <figure class="contact-git">
+            <i class="fa-brands fa-github fa-2x"></i>
+            <figcaption>
+              <p>GitHub</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="https://fontawesome.com/icons/bars-staggered?s=solid" target="_blank">
+          <figure class="contact-twitter">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+            <figcaption>
+              <p>Twitter</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="mailto:danielmedina7778@gmail.com" target="_blank">
+          <figure class="contact-mail">
+            <i class="fa-solid fa-envelope fa-2x"></i>
+            <figcaption>
+              <p>E-mail</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="https://fontawesome.com/icons/bars-staggered?s=solid" target="_blank">
+          <figure class="contact-linkedin">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+            <figcaption>
+              <p>Linkedin</p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
