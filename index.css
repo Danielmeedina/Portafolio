@@ -6,7 +6,9 @@
   --first-color: rgb(32, 32, 32); 
   --second-color: rgba(44, 43, 44, 0.384);
   --thrid-color: rgb(66, 148, 191);
+  --thrid-color-05: rgba(125, 144, 239, 0.25);
   --fourth-color:  rgb(242, 100, 87);
+  --fourth-color-05: rgba(252, 140, 99, 0.25);
   --letter-color: rgb(255, 255, 255);
 }
 
@@ -52,12 +54,12 @@ body{
 }
 
 .nav-logo{
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .nav-logo img{
-  width: 150px;
-  height: 50px;
+  width: 230px;
+  height: 60px;
   object-fit: cover;
 }
 
@@ -93,7 +95,7 @@ body{
   .nav-links-mini button{
     border: none;
     background-color: transparent;
-    color: white;
+    color: var(--letter-color);
   }
 
   .panel{
@@ -125,7 +127,7 @@ body{
     width: 100%;
     padding: 30px;
     text-decoration: none;
-    color: white;
+    color: var(--letter-color);
     background: linear-gradient(180deg, var(--thrid-color), var(--fourth-color));
     font-size: 25px;
   }
@@ -135,6 +137,7 @@ body{
   }
   
 }
+
 
                                                     /* CSS HOME */
 
@@ -176,7 +179,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  background: linear-gradient(180deg, rgba(125, 144, 239, 0.5), rgba(252, 140, 99, 0.5));
+  background: linear-gradient(180deg, var(--thrid-color-05), var(--fourth-color-05));
   border-radius: 13% 87% 24% 76% / 61% 23% 77% 39%;
 }
 
@@ -268,7 +271,7 @@ body{
   position: absolute;
   width: 2px;
   height: 115%;
-  background-color: white;
+  background-color: var(--letter-color);
   right: -35px;
 }
 
@@ -360,8 +363,6 @@ body{
 
 
 
-
-
                                                     /* CSS PROJECTS */
 
 
@@ -427,13 +428,13 @@ body{
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  gap: 40px;
+  gap: 30px;
   margin-top: 40px;
   background-color: var(--second-color);
 }
 
 .card{
-  width: 270px;
+  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,7 +584,7 @@ body{
 
 #contact a{  
   text-decoration: none;
-  color: white;
+  color: var(--letter-color);
 }
 
 .footer-container{
@@ -638,18 +639,11 @@ body{
 }
 
 
-.contact-git{
-  background-color: var(--first-color);
-}
-.contact-twitter{
-  background-color: var(--first-color);
-}
-
-.contact-mail{
-  background-color: var(--first-color);
-}
-
-.contact-linkedin{
+.contact-git,
+.contact-twitter,
+.contact-mail,
+.contact-linkedin
+{
   background-color: var(--first-color);
 }
 
