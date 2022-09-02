@@ -183,7 +183,6 @@ body{
   border-radius: 13% 87% 24% 76% / 61% 23% 77% 39%;
 }
 
-
 .home-container h1{
   font-size: var(--font-main);
 }
@@ -213,6 +212,14 @@ body{
   gap: 40px;
   background: linear-gradient(180deg, var(--thrid-color), var(--fourth-color));
   position: relative;
+}
+
+@media screen and (min-height: 800px ) {
+
+  #about{
+    min-height: 40vh;
+  }
+  
 }
 
 #about h2{
@@ -259,6 +266,7 @@ body{
   height: 190px;
   bottom: -72px;
   right: -20px;
+  z-index: 3;
 }
 
 .me-image img{
@@ -377,6 +385,14 @@ body{
   flex-flow: column nowrap;
   background: linear-gradient(0deg, var(--thrid-color), var(--fourth-color));
   position: relative;
+}
+
+@media screen and (min-height: 800px ) {
+
+  #projects{
+    min-height: 40vh;
+  }
+  
 }
 
 #projects h2{
@@ -595,6 +611,15 @@ body{
   justify-content:flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+
+@media screen and (min-height: 800px ) {
+
+  .footer-container{
+    min-height: 30vh;
+  }
+  
 }
 
 .footer-container h2{
