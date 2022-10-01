@@ -1,27 +1,28 @@
-                                                    /* CSS BODY */
-:root{
+/* CSS BODY */
+:root {
   --font-main: calc(3em + 3vw);
   --font-title: calc(1.2em + 1vw);
   --font-text: 18px;
-  --first-color: rgb(32, 32, 32); 
+  --first-color: rgb(32, 32, 32);
   --second-color: rgba(44, 43, 44, 0.384);
   --thrid-color: rgb(66, 148, 191);
   --thrid-color-05: rgba(125, 144, 239, 0.25);
-  --fourth-color:  rgb(242, 100, 87);
+  --fourth-color: rgb(242, 100, 87);
   --fourth-color-05: rgba(252, 140, 99, 0.25);
   --letter-color: rgb(255, 255, 255);
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: var(--font-text);
   scroll-behavior: smooth;
+  scroll-margin-top: 70px;
 }
 
-body{
+body {
   color: var(--letter-color);
   background-image: url(img/wallpaperFondo2.png);
   background-repeat: no-repeat;
@@ -33,17 +34,17 @@ body{
   margin: 0 auto;
 }
 
-                                                    /* CSS NAV */
+/* CSS NAV */
 
-.nav-links-mini{
+.nav-links-mini {
   display: none;
 }
 
-.panel{
+.panel {
   display: none;
 }
 
-.nav{
+.nav {
   background-color: var(--first-color);
   display: flex;
   justify-content: space-between;
@@ -53,23 +54,23 @@ body{
   z-index: 999;
 }
 
-.nav-logo{
+.nav-logo {
   margin-left: 5px;
 }
 
-.nav-logo img{
+.nav-logo img {
   width: 230px;
   height: 60px;
   object-fit: cover;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   flex-flow: row nowrap;
   margin-right: 15px;
 }
 
-.nav-links a{
+.nav-links a {
   background-color: transparent;
   color: var(--letter-color);
   padding: 18px;
@@ -78,27 +79,27 @@ body{
   border-bottom: 2px solid transparent;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   border-bottom: 2px solid var(--letter-color);
 }
 
 @media screen and (max-width: 550px) {
-  .nav-links{
+  .nav-links {
     display: none;
   }
 
-  .nav-links-mini{
+  .nav-links-mini {
     display: block;
     padding-right: 15px;
   }
 
-  .nav-links-mini button{
+  .nav-links-mini button {
     border: none;
     background-color: transparent;
     color: var(--letter-color);
   }
 
-  .panel{
+  .panel {
     display: none;
     justify-content: center;
     align-items: center;
@@ -113,7 +114,7 @@ body{
     z-index: 990;
   }
 
-  .link-mini{
+  .link-mini {
     width: 100%;
     height: 60vh;
     display: flex;
@@ -123,25 +124,27 @@ body{
     text-align: center;
   }
 
-  .link-mini a{
+  .link-mini a {
     width: 100%;
     padding: 30px;
     text-decoration: none;
     color: var(--letter-color);
-    background: linear-gradient(180deg, var(--thrid-color), var(--fourth-color));
+    background: linear-gradient(
+      180deg,
+      var(--thrid-color),
+      var(--fourth-color)
+    );
     font-size: 25px;
   }
 
-  .is-active{
+  .is-active {
     display: flex;
   }
-  
 }
 
+/* CSS HOME */
 
-                                                    /* CSS HOME */
-
-#home{
+#home {
   min-height: 605px;
   display: flex;
   justify-content: center;
@@ -149,28 +152,33 @@ body{
   width: 100%;
 }
 
-#home::after{
+#home::after {
   content: "";
   width: 100%;
   min-height: 705px;
   position: absolute;
   left: 0;
   top: 0;
-  background: linear-gradient(0deg, var(--thrid-color),transparent, transparent, transparent);
+  background: linear-gradient(
+    0deg,
+    var(--thrid-color),
+    transparent,
+    transparent,
+    transparent
+  );
 }
 
 @media screen and (min-height: 605px) {
-  #home{
-  min-height: 100vh;
+  #home {
+    min-height: 100vh;
   }
 
-  #home::after{
+  #home::after {
     min-height: 110vh;
-  }  
+  }
 }
 
-
-.home-container{
+.home-container {
   max-width: 1300px;
   height: 350px;
   padding: 15px;
@@ -179,30 +187,33 @@ body{
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  background: linear-gradient(180deg, var(--thrid-color-05), var(--fourth-color-05));
+  background: linear-gradient(
+    180deg,
+    var(--thrid-color-05),
+    var(--fourth-color-05)
+  );
   border-radius: 13% 87% 24% 76% / 61% 23% 77% 39%;
 }
 
-.home-container h1{
+.home-container h1 {
   font-size: var(--font-main);
 }
 
-.home-container h2{
+.home-container h2 {
   font-size: var(--font-title);
   border-bottom: 3px solid var(--second-color);
   color: var(--first-color);
 }
-.home-container p{
+.home-container p {
   color: var(--first-color);
 }
 
+/* CSS ABOUT */
 
-                                                    /* CSS ABOUT */
-
-#about{
+#about {
   min-height: 90vh;
-  margin-top: -1px;
-  padding: 60px 0 0;
+  /* margin-top: -1px;
+  padding: 60px 0 0; */
   width: 100%;
   text-align: center;
   display: flex;
@@ -214,21 +225,19 @@ body{
   position: relative;
 }
 
-@media screen and (min-height: 800px ) {
-
-  #about{
+@media screen and (min-height: 800px) {
+  #about {
     min-height: 40vh;
   }
-  
 }
 
-#about h2{
+#about h2 {
   font-size: var(--font-title);
   color: var(--first-color);
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
-.about-container{
+.about-container {
   width: 95%;
   padding: 15px;
   display: flex;
@@ -238,7 +247,7 @@ body{
   gap: 35px;
 }
 
-.me-container{
+.me-container {
   min-height: 350px;
   max-width: 620px;
   padding: 20px;
@@ -253,14 +262,14 @@ body{
   gap: 10px;
 }
 
-.me-container p{
+.me-container p {
   padding-bottom: 60px;
 }
-.me-container h3{
+.me-container h3 {
   color: var(--thrid-color);
 }
 
-.me-image{
+.me-image {
   position: absolute;
   width: 190px;
   height: 190px;
@@ -269,13 +278,13 @@ body{
   z-index: 3;
 }
 
-.me-image img{
+.me-image img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.divider{
+.divider {
   position: absolute;
   width: 2px;
   height: 115%;
@@ -283,20 +292,17 @@ body{
   right: -35px;
 }
 
-
 @media screen and (max-width: 750px) {
-
-  .about-container{
+  .about-container {
     flex-flow: row wrap;
   }
 
-  .divider{
+  .divider {
     display: none;
   }
-  
 }
 
-.skills-container{
+.skills-container {
   min-width: 300px;
   min-height: 350px;
   padding: 30px 20px;
@@ -307,21 +313,20 @@ body{
   gap: 30px;
 }
 
-.skills-container h3{
+.skills-container h3 {
   font-size: var(--font-title);
 }
 
-.skills-icons{
+.skills-icons {
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   gap: 10px;
-
 }
 
-.box-skill{
+.box-skill {
   background-color: var(--first-color);
   width: 95px;
   height: 95px;
@@ -329,11 +334,11 @@ body{
   border-radius: 20% 80% 24% 76% / 77% 32% 68% 23%;
 }
 
-.box-skill:hover{
+.box-skill:hover {
   transform: scale(1.1);
 }
 
-.skill{
+.skill {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,42 +346,45 @@ body{
   gap: 5px;
 }
 
-.html i, .html p{
+.html i,
+.html p {
   color: #f2652c;
 }
 
-.css i, .css p{
+.css i,
+.css p {
   color: #2196f3;
 }
 
-.js i, .js p{
+.js i,
+.js p {
   color: #f7e01d;
 }
 
-.react i, .react p{
+.react i,
+.react p {
   color: #63dcf5;
 }
 
-.ts p{
-  color: #3178c6 ;
+.ts p {
+  color: #3178c6;
 }
 
-.github i, .github p{
+.github i,
+.github p {
   color: white;
 }
 
-.git i, .git p{
+.git i,
+.git p {
   color: #f64d27;
 }
 
+/* CSS PROJECTS */
 
-
-                                                    /* CSS PROJECTS */
-
-
-#projects{
+#projects {
   min-height: 100vh;
-  padding: 50px 0 40px;
+  padding-bottom: 40px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -387,21 +395,19 @@ body{
   position: relative;
 }
 
-@media screen and (min-height: 800px ) {
-
-  #projects{
+@media screen and (min-height: 800px) {
+  #projects {
     min-height: 40vh;
   }
-  
 }
 
-#projects h2{
+#projects h2 {
   font-size: var(--font-title);
   color: var(--first-color);
   padding-top: 10px;
 }
 
-.before-contact{
+.before-contact {
   width: 100%;
   height: 80px;
   position: absolute;
@@ -411,20 +417,20 @@ body{
   border-bottom-right-radius: 60%;
 }
 
-.before-contact-img{
+.before-contact-img {
   max-width: 190px;
   max-height: 190px;
   position: absolute;
   bottom: -80px;
 }
 
-.before-contact-img img{
+.before-contact-img img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.flecha{
+.flecha {
   width: 120px;
   height: 120px;
   position: absolute;
@@ -436,7 +442,7 @@ body{
   z-index: -1;
 }
 
-.card-container{
+.card-container {
   width: 90%;
   padding: 30px 15px;
   padding-bottom: 30px;
@@ -449,7 +455,7 @@ body{
   background-color: var(--second-color);
 }
 
-.card{
+.card {
   width: 250px;
   display: flex;
   justify-content: center;
@@ -460,20 +466,19 @@ body{
   background-color: var(--first-color);
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.1);
 }
 
-.card:hover img{
+.card:hover img {
   filter: grayscale(0);
-
 }
 
-.card-img{
+.card-img {
   width: 100%;
 }
 
-.card-img img{
+.card-img img {
   max-width: 100%;
   height: 200px;
   object-fit: cover;
@@ -484,13 +489,12 @@ body{
 }
 
 @media screen and (max-width: 990px) {
-  .card-img img{
+  .card-img img {
     filter: grayscale(0);
   }
-  
 }
 
-.details{
+.details {
   gap: 15px;
   padding: 10px;
   display: flex;
@@ -499,13 +503,13 @@ body{
   align-items: center;
 }
 
-.details h3{
+.details h3 {
   color: var(--letter-color);
   font-weight: 600;
   font-size: var(--font-text);
 }
 
-.container-icons{
+.container-icons {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -513,24 +517,23 @@ body{
   gap: 20px;
 }
 
-
-.html{
+.html {
   color: #f2652c;
 }
 
-.css{
+.css {
   color: #2196f3;
 }
 
-.js{
+.js {
   color: #f7e01d;
 }
 
-.react{
+.react {
   color: #63dcf5;
 }
 
-.container-buttons{
+.container-buttons {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -548,15 +551,15 @@ body{
   position: relative;
   overflow: hidden;
   border: 2px solid black;
-  transition: color .5s;
+  transition: color 0.5s;
   z-index: 1;
   font-size: 17px;
   border-radius: 6px;
   font-weight: 500;
   color: white;
   background-color: black;
- }
- 
+}
+
 .container-buttons button:before {
   content: "";
   position: absolute;
@@ -565,77 +568,70 @@ body{
   height: 150px;
   width: 200px;
   border-radius: 50%;
- }
- 
+}
+
 .container-buttons button:hover {
   color: #fff;
- }
- 
+}
+
 .container-buttons button:before {
   top: 100%;
   left: 100%;
-  transition: all .7s;
- }
- 
+  transition: all 0.7s;
+}
+
 .container-buttons button:hover:before {
   top: -30px;
   left: -30px;
- }
- 
+}
+
 .container-buttons button:active:before {
   background: var(--thrid-color);
   transition: background 0s;
- }
+}
 
+/* CSS FOOTER */
 
-                                                    /* CSS FOOTER */
-
-
-
-#contact{
+#contact {
   margin-top: 90px;
   position: relative;
+}
 
-} 
-
-#contact a{  
+#contact a {
   text-decoration: none;
   color: var(--letter-color);
 }
 
-.footer-container{
+.footer-container {
   min-height: 50vh;
   width: 100%;
   padding: 0 10px;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
 
-
-@media screen and (min-height: 800px ) {
-
-  .footer-container{
+@media screen and (min-height: 800px) {
+  .footer-container {
     min-height: 30vh;
   }
-  
 }
 
-.footer-container h2{
+.footer-container h2 {
   font-size: var(--font-title);
   color: var(--first-color);
   padding-top: 40px;
 }
 
-.footer-container h3{
+.footer-container h3 {
   font-size: var(--font-text);
   color: var(--first-color);
   padding-top: 15px;
   text-align: center;
 }
 
-.container-contact{
+.container-contact {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -644,7 +640,7 @@ body{
   padding: 40px 20px;
 }
 
-.container-contact figure{
+.container-contact figure {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -654,64 +650,56 @@ body{
   border-radius: 5px;
 }
 
-.container-contact figure:hover{
-  transform: scale(1.150);
+.container-contact figure:hover {
+  transform: scale(1.15);
 }
 
-.container-contact figcaption p{
+.container-contact figcaption p {
   font-size: var(--font-text);
   color: var(--letter-color);
 }
 
-
 .contact-git,
 .contact-twitter,
 .contact-mail,
-.contact-linkedin
-{
+.contact-linkedin {
   background-color: var(--first-color);
 }
 
-.contact-git:hover{
-  background-color:  #b7b8b8;
+.contact-git:hover {
+  background-color: #b7b8b8;
 }
-.contact-twitter:hover{
+.contact-twitter:hover {
   background-color: #1c9bf0;
 }
 
-.contact-mail:hover{
+.contact-mail:hover {
   background-color: #e94335;
 }
 
-.contact-linkedin:hover{
+.contact-linkedin:hover {
   background-color: #006599;
 }
 
-.copyright{
+.copyright {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
 }
 
 @media screen and (max-width: 990px) {
-
-  .contact-git{
+  .contact-git {
     background-color: #b7b8b8;
   }
-  .contact-twitter{
+  .contact-twitter {
     background-color: #1c9bf0;
   }
-  
-  .contact-mail{
+
+  .contact-mail {
     background-color: #e94335;
   }
-  
-  .contact-linkedin{
+
+  .contact-linkedin {
     background-color: #006599;
   }
-
 }
-
-
-
-
