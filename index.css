@@ -10,6 +10,7 @@
   --fourth-color: rgb(242, 100, 87);
   --fourth-color-05: rgba(252, 140, 99, 0.25);
   --letter-color: rgb(255, 255, 255);
+  --width-page: 1200px;
 }
 
 * {
@@ -24,14 +25,12 @@
 
 body {
   color: var(--letter-color);
-  /* background-image: url(img/wallpaperFondo2.png); */
-  background-color: rebeccapurple;
+  background-image: url(img/wallpaperFondo2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
   background-attachment: fixed;
   position: relative;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -47,16 +46,18 @@ body {
 
 .nav {
   background-color: var(--first-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
-.nav-logo {
-  margin-left: 5px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--width-page);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-logo img {
@@ -169,18 +170,11 @@ body {
   );
 }
 
-@media screen and (min-height: 605px) {
-  #home {
-    min-height: 100vh;
-  }
-
-  #home::after {
-    min-height: 110vh;
-  }
+.home-container2 {
+  max-width: var(--width-page);
 }
 
-.home-container {
-  max-width: 1300px;
+.home-info {
   height: 350px;
   padding: 15px;
   text-align: center;
@@ -196,34 +190,35 @@ body {
   border-radius: 13% 87% 24% 76% / 61% 23% 77% 39%;
 }
 
-.home-container h1 {
+.home-info h1 {
   font-size: var(--font-main);
 }
 
-.home-container h2 {
+.home-info h2 {
   font-size: var(--font-title);
   border-bottom: 3px solid var(--second-color);
   color: var(--first-color);
 }
-.home-container p {
+.home-info p {
   color: var(--first-color);
+}
+
+@media screen and (min-height: 605px) {
+  #home {
+    min-height: 100vh;
+  }
+
+  #home::after {
+    min-height: 110vh;
+  }
 }
 
 /* CSS ABOUT */
 
 #about {
   min-height: 90vh;
-  /* margin-top: -1px;
-  padding: 60px 0 0; */
   width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  gap: 40px;
   background: linear-gradient(180deg, var(--thrid-color), var(--fourth-color));
-  position: relative;
 }
 
 @media screen and (min-height: 800px) {
@@ -235,12 +230,23 @@ body {
 #about h2 {
   font-size: var(--font-title);
   color: var(--first-color);
-  /* padding-top: 10px; */
+}
+
+.about-main {
+  position: relative;
+  max-width: var(--width-page);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 40px;
 }
 
 .about-container {
-  width: 95%;
-  padding: 15px;
+  padding: 9px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -250,7 +256,7 @@ body {
 
 .me-container {
   min-height: 350px;
-  max-width: 620px;
+  max-width: 550px;
   padding: 20px;
   font-size: var(--font-text);
   background-color: var(--first-color);
@@ -272,10 +278,10 @@ body {
 
 .me-image {
   position: absolute;
-  width: 190px;
-  height: 190px;
-  bottom: -72px;
-  right: -20px;
+  width: 160px;
+  height: 160px;
+  bottom: -60px;
+  right: -5px;
   z-index: 3;
 }
 
@@ -384,16 +390,10 @@ body {
 /* CSS PROJECTS */
 
 #projects {
-  min-height: 100vh;
-  padding-bottom: 40px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: column nowrap;
-  background: linear-gradient(0deg, var(--thrid-color), var(--fourth-color));
   position: relative;
+  background: linear-gradient(0deg, var(--thrid-color), var(--fourth-color));
+  width: 100%;
+  min-height: 70vh;
 }
 
 @media screen and (min-height: 800px) {
@@ -408,6 +408,18 @@ body {
   padding-top: 10px;
 }
 
+.projects-container {
+  max-width: var(--width-page);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
 .before-contact {
   width: 100%;
   height: 80px;
@@ -418,11 +430,12 @@ body {
   border-bottom-right-radius: 60%;
 }
 
-.before-contact-img {
+/* .before-contact-img {
   max-width: 190px;
   max-height: 190px;
   position: absolute;
   bottom: -80px;
+  left: 47%;
 }
 
 .before-contact-img img {
@@ -436,15 +449,17 @@ body {
   height: 120px;
   position: absolute;
   bottom: -190px;
+  left: 35%;
+  right: 35%;
   border-top: 60px solid var(--fourth-color);
   border-bottom: 60px solid transparent;
   border-right: 60px solid transparent;
   border-left: 60px solid transparent;
   z-index: -1;
-}
+} */
 
 .card-container {
-  width: 90%;
+  width: 100%;
   padding: 30px 15px;
   padding-bottom: 30px;
   display: flex;
@@ -453,7 +468,6 @@ body {
   flex-flow: row wrap;
   gap: 30px;
   margin-top: 40px;
-  background-color: var(--second-color);
 }
 
 .card {
@@ -594,8 +608,8 @@ body {
 /* CSS FOOTER */
 
 #contact {
+  width: 100%;
   margin-top: 90px;
-  position: relative;
 }
 
 #contact a {
@@ -604,8 +618,11 @@ body {
 }
 
 .footer-container {
+  position: relative;
   min-height: 50vh;
-  width: 100%;
+  max-width: var(--width-page);
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 10px;
   display: flex;
   justify-content: flex-start;
