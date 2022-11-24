@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#4294bf" />
-    <link rel="icon" href="img/LogoMini.png" />
-    <link rel="apple-touch-icon" href="img/LogoMini.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/LogoMini.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="128x128"
+      href="img/LogoMini.png"
+    />
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,12 +62,13 @@
       </div>
     </aside>
     <section id="home">
-      <div class="home-container2">
+      <div class="home-container">
         <div class="home-info">
           <h1>Daniel Medina</h1>
           <h2>Frontend Developer jr</h2>
         </div>
       </div>
+      <div class="home-gradient"></div>
     </section>
 
     <section id="about">
@@ -124,14 +130,6 @@
                 </figure>
               </div>
               <div class="box-skill">
-                <figure class="skill ts">
-                  <img src="icons/typescriptPrueba.png" alt="" />
-                  <figcaption>
-                    <p>Typescript</p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="box-skill">
                 <figure class="skill github">
                   <i class="fa-brands fa-github fa-2x"></i>
                   <figcaption>
@@ -144,6 +142,22 @@
                   <i class="fa-brands fa-git-alt fa-2x"></i>
                   <figcaption>
                     <p>Git</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="box-skill">
+                <figure class="skill node">
+                  <i class="fa-brands fa-node-js fa-2x"></i>
+                  <figcaption>
+                    <p>Node js</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="box-skill">
+                <figure class="skill mongodb">
+                  <img src="icons/mongodb.svg" alt="" />
+                  <figcaption>
+                    <p>Mongo db</p>
                   </figcaption>
                 </figure>
               </div>
@@ -194,7 +208,7 @@
               <img src="img/pokemonApi.png" alt="proyecto api" />
             </div>
             <div class="details">
-              <h3>API pokemon</h3>
+              <h3>Pokemon</h3>
               <div class="container-icons">
                 <figure>
                   <i class="fa-brands fa-react fa-2x react"></i>
@@ -223,32 +237,31 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img
-                src="https://imgs.search.brave.com/iiu7qjNd_HDxOcseFkAi6ZNpndVSYaOIxjgBrTyzjCo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYyODkw/NDMuanBn"
-                alt=""
-              />
+              <img src="img/Guardian-tales.png" alt="Guardian-tales project" />
             </div>
             <div class="details">
-              <h3>Titulo</h3>
+              <h3>Guardian Tales</h3>
               <div class="container-icons">
                 <figure>
-                  <i class="fa-brands fa-html5 fa-2x html"></i>
-                  <figcaption>Html</figcaption>
+                  <i class="fa-brands fa-react fa-2x react"></i>
+                  <figcaption>React</figcaption>
                 </figure>
                 <figure>
                   <i class="fa-brands fa-css3-alt fa-2x css"></i>
                   <figcaption>Css</figcaption>
                 </figure>
-                <figure>
-                  <i class="fa-brands fa-square-js fa-2x js"></i>
-                  <figcaption>Js</figcaption>
-                </figure>
               </div>
               <div class="container-buttons">
-                <a href="" target="_blank" rel="noopener"
+                <a
+                  href="https://github.com/Danielmeedina/guardian-tales"
+                  target="_blank"
+                  rel="noopener"
                   ><button>code 📃</button></a
                 >
-                <a href="" target="_blank" rel="noopener"
+                <a
+                  href="https://guardiantales.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
                   ><button>view 💻</button></a
                 >
               </div>
@@ -256,32 +269,25 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img
-                src="https://imgs.search.brave.com/iiu7qjNd_HDxOcseFkAi6ZNpndVSYaOIxjgBrTyzjCo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYyODkw/NDMuanBn"
-                alt=""
-              />
+              <img src="img/Guardian-tales.png" alt="Api guardian tales" />
             </div>
             <div class="details">
-              <h3>Titulo</h3>
+              <h3>API guardian tales</h3>
               <div class="container-icons">
                 <figure>
-                  <i class="fa-brands fa-html5 fa-2x html"></i>
-                  <figcaption>Html</figcaption>
+                  <i class="fa-brands fa-node-js fa-2x node"></i>
+                  <figcaption>Node js</figcaption>
                 </figure>
                 <figure>
-                  <i class="fa-brands fa-css3-alt fa-2x css"></i>
-                  <figcaption>Css</figcaption>
-                </figure>
-                <figure>
-                  <i class="fa-brands fa-square-js fa-2x js"></i>
-                  <figcaption>Js</figcaption>
+                  <img src="icons/mongodb.svg" alt="" />
+                  <figcaption>Mongo db</figcaption>
                 </figure>
               </div>
               <div class="container-buttons">
-                <a href="" target="_blank" rel="noopener"
-                  ><button>code 📃</button></a
-                >
-                <a href="" target="_blank" rel="noopener"
+                <a
+                  href="https://api-guardian-tales.herokuapp.com/api/guardian-tales/heroes"
+                  target="_blank"
+                  rel="noopener"
                   ><button>view 💻</button></a
                 >
               </div>
@@ -289,10 +295,10 @@
           </div>
         </div>
       </div>
-      <div class="before-contact"></div>
     </section>
 
     <footer id="contact">
+      <div class="before-contact"></div>
       <div class="footer-container">
         <h2>CONTACT ME</h2>
         <div class="container-contact">

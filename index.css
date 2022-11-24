@@ -5,10 +5,7 @@
   --font-text: 18px;
   --first-color: rgb(32, 32, 32);
   --second-color: rgba(44, 43, 44, 0.384);
-  --thrid-color: rgb(66, 148, 191);
-  --thrid-color-05: rgba(125, 144, 239, 0.25);
-  --fourth-color: rgb(242, 100, 87);
-  --fourth-color-05: rgba(252, 140, 99, 0.25);
+  --thrid-color: rgb(92, 225, 230);
   --letter-color: rgb(255, 255, 255);
   --width-page: 1200px;
 }
@@ -25,13 +22,7 @@
 
 body {
   color: var(--letter-color);
-  background-image: url(img/wallpaperFondo2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  background-attachment: fixed;
-  position: relative;
-  margin: 0 auto;
+  background: rgba(24, 28, 39, 1);
 }
 
 /* CSS NAV */
@@ -45,10 +36,15 @@ body {
 }
 
 .nav {
-  background-color: var(--first-color);
-  position: sticky;
+  background-color: transparent;
+  position: fixed;
   top: 0;
   z-index: 999;
+  width: 100%;
+}
+
+.nav:hover {
+  background-color: var(--first-color);
 }
 
 .nav-container {
@@ -74,15 +70,15 @@ body {
 
 .nav-links a {
   background-color: transparent;
-  color: var(--letter-color);
+  color: var(--thrid-color);
   padding: 18px;
   font-size: 21px;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid var(--letter-color);
+  border-bottom: 3px solid var(--thrid-color);
 }
 
 @media screen and (max-width: 550px) {
@@ -133,8 +129,9 @@ body {
     color: var(--letter-color);
     background: linear-gradient(
       180deg,
+      transparent,
       var(--thrid-color),
-      var(--fourth-color)
+      transparent
     );
     font-size: 25px;
   }
@@ -147,47 +144,160 @@ body {
 /* CSS HOME */
 
 #home {
-  min-height: 605px;
+  /* min-height: 605px; */
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  background-image: url(img/homeImg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#home::after {
-  content: "";
-  width: 100%;
-  min-height: 705px;
+.home-gradient {
   position: absolute;
-  left: 0;
-  top: 0;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  background: rgb(24, 28, 39);
   background: linear-gradient(
     0deg,
-    var(--thrid-color),
-    transparent,
-    transparent,
-    transparent
+    rgba(24, 28, 39, 1) 33%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
-.home-container2 {
+.home-container {
   max-width: var(--width-page);
 }
 
 .home-info {
-  height: 350px;
+  height: 75vh;
   padding: 15px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  background: linear-gradient(
-    180deg,
-    var(--thrid-color-05),
-    var(--fourth-color-05)
+  background: rgb(24, 28, 39);
+  background: radial-gradient(
+    circle,
+    rgba(24, 28, 39, 0) 35%,
+    var(--thrid-color) 52%,
+    rgba(24, 28, 39, 0) 65%
   );
-  border-radius: 13% 87% 24% 76% / 61% 23% 77% 39%;
+  animation: ring infinite normal 1.5s 1s ease-out both;
+}
+
+@keyframes ring {
+  0% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 42%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  10% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 45%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  20% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 48%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  30% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 53%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  40% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 57%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 60%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  55%,
+  75% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 63%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  80% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 60%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  85% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 57%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  88% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 53%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  93% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 48%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  96% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 45%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle,
+      rgba(24, 28, 39, 0) 35%,
+      var(--thrid-color) 42%,
+      rgba(24, 28, 39, 0) 65%
+    );
+  }
 }
 
 .home-info h1 {
@@ -196,8 +306,8 @@ body {
 
 .home-info h2 {
   font-size: var(--font-title);
-  border-bottom: 3px solid var(--second-color);
-  color: var(--first-color);
+  border-bottom: 3px solid var(--letter-color);
+  color: var(--thrid-color);
 }
 .home-info p {
   color: var(--first-color);
@@ -216,9 +326,8 @@ body {
 /* CSS ABOUT */
 
 #about {
-  min-height: 90vh;
+  min-height: 80vh;
   width: 100%;
-  background: linear-gradient(180deg, var(--thrid-color), var(--fourth-color));
 }
 
 @media screen and (min-height: 800px) {
@@ -229,7 +338,7 @@ body {
 
 #about h2 {
   font-size: var(--font-title);
-  color: var(--first-color);
+  color: var(--letter-color);
 }
 
 .about-main {
@@ -322,6 +431,7 @@ body {
 
 .skills-container h3 {
   font-size: var(--font-title);
+  color: var(--thrid-color);
 }
 
 .skills-icons {
@@ -335,7 +445,7 @@ body {
 
 .box-skill {
   background-color: var(--first-color);
-  width: 95px;
+  width: 100px;
   height: 95px;
   padding: 10px;
   border-radius: 20% 80% 24% 76% / 77% 32% 68% 23%;
@@ -373,10 +483,6 @@ body {
   color: #63dcf5;
 }
 
-.ts p {
-  color: #3178c6;
-}
-
 .github i,
 .github p {
   color: white;
@@ -387,11 +493,19 @@ body {
   color: #f64d27;
 }
 
+.node i,
+.node p {
+  color: #5f8f5c;
+}
+
+.mongodb p{
+  color: #13a852;
+}
+
 /* CSS PROJECTS */
 
 #projects {
   position: relative;
-  background: linear-gradient(0deg, var(--thrid-color), var(--fourth-color));
   width: 100%;
   min-height: 70vh;
 }
@@ -404,7 +518,7 @@ body {
 
 #projects h2 {
   font-size: var(--font-title);
-  color: var(--first-color);
+  color: var(--letter-color);
   padding-top: 10px;
 }
 
@@ -412,51 +526,12 @@ body {
   max-width: var(--width-page);
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 40px;
   text-align: center;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
 }
-
-.before-contact {
-  width: 100%;
-  height: 80px;
-  position: absolute;
-  bottom: -75px;
-  background: linear-gradient(180deg, var(--thrid-color), var(--fourth-color));
-  border-bottom-left-radius: 60%;
-  border-bottom-right-radius: 60%;
-}
-
-/* .before-contact-img {
-  max-width: 190px;
-  max-height: 190px;
-  position: absolute;
-  bottom: -80px;
-  left: 47%;
-}
-
-.before-contact-img img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.flecha {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  bottom: -190px;
-  left: 35%;
-  right: 35%;
-  border-top: 60px solid var(--fourth-color);
-  border-bottom: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-left: 60px solid transparent;
-  z-index: -1;
-} */
 
 .card-container {
   width: 100%;
@@ -467,7 +542,7 @@ body {
   justify-content: center;
   flex-flow: row wrap;
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .card {
@@ -499,8 +574,8 @@ body {
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  filter: grayscale(80%);
-  transition: all 1s ease-in;
+  filter: grayscale(90%);
+  transition: filter 1s ease-in;
 }
 
 @media screen and (max-width: 990px) {
@@ -546,6 +621,10 @@ body {
 
 .react {
   color: #63dcf5;
+}
+
+.node {
+  color: #5f8f5c;
 }
 
 .container-buttons {
@@ -609,7 +688,10 @@ body {
 
 #contact {
   width: 100%;
-  margin-top: 90px;
+  margin-top: 20px;
+  position: relative;
+  background: rgb(24, 28, 39);
+  background: linear-gradient(360deg, var(--first-color) 55%, transparent 100%);
 }
 
 #contact a {
@@ -619,7 +701,7 @@ body {
 
 .footer-container {
   position: relative;
-  min-height: 50vh;
+  min-height: 40vh;
   max-width: var(--width-page);
   margin-left: auto;
   margin-right: auto;
@@ -638,13 +720,13 @@ body {
 
 .footer-container h2 {
   font-size: var(--font-title);
-  color: var(--first-color);
+  color: var(--letter-color);
   padding-top: 40px;
 }
 
 .footer-container h3 {
   font-size: var(--font-text);
-  color: var(--first-color);
+  color: var(--thrid-color);
   padding-top: 15px;
   text-align: center;
 }
@@ -656,6 +738,7 @@ body {
   flex-flow: row wrap;
   gap: 14px;
   padding: 40px 20px;
+  margin-bottom: 30px;
 }
 
 .container-contact figure {
@@ -675,13 +758,6 @@ body {
 .container-contact figcaption p {
   font-size: var(--font-text);
   color: var(--letter-color);
-}
-
-.contact-git,
-.contact-twitter,
-.contact-mail,
-.contact-linkedin {
-  background-color: var(--first-color);
 }
 
 .contact-git:hover {
