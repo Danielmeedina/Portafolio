@@ -6,6 +6,7 @@
   --first-color: rgb(32, 32, 32);
   --second-color: rgba(44, 43, 44, 0.384);
   --thrid-color: rgb(92, 225, 230);
+  --optional-color: rgba(6, 80, 156, 0.93);
   --letter-color: rgb(255, 255, 255);
   --width-page: 1200px;
 }
@@ -22,7 +23,8 @@
 
 body {
   color: var(--letter-color);
-  background: rgba(24, 28, 39, 1);
+  background: url(img/back.svg), rgba(24, 28, 39, 1);
+  background-position: center;
 }
 
 /* CSS NAV */
@@ -84,6 +86,10 @@ body {
 @media screen and (max-width: 550px) {
   .nav-links {
     display: none;
+  }
+
+  .nav {
+    background-color: var(--first-color);
   }
 
   .nav-links-mini {
@@ -307,7 +313,7 @@ body {
 .home-info h2 {
   font-size: var(--font-title);
   border-bottom: 3px solid var(--letter-color);
-  color: var(--thrid-color);
+  color: var(--optional-color);
 }
 .home-info p {
   color: var(--first-color);
@@ -328,6 +334,7 @@ body {
 #about {
   min-height: 80vh;
   width: 100%;
+  position: relative;
 }
 
 @media screen and (min-height: 800px) {
@@ -498,7 +505,7 @@ body {
   color: #5f8f5c;
 }
 
-.mongodb p{
+.mongodb p {
   color: #13a852;
 }
 
