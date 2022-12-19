@@ -588,6 +588,11 @@ h2:after {
   gap: 5px;
 }
 
+.skill img{
+  width: 32px;
+  height: 32px;
+}
+
 .html i,
 .html p {
   color: #f2652c;
@@ -625,6 +630,10 @@ h2:after {
 
 .mongodb p {
   color: #13a852;
+}
+
+.typescript p {
+  color: #017acc;
 }
 
 /* CSS PROJECTS */
