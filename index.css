@@ -588,7 +588,7 @@ h2:after {
   gap: 5px;
 }
 
-.skill img{
+.skill img {
   width: 32px;
   height: 32px;
 }
@@ -1044,6 +1044,12 @@ h2:after {
 .copyright {
   -ms-flex-item-align: end;
   align-self: flex-end;
+}
+
+.skills-icons:hover > :not(:hover),
+.card-container:hover > :not(:hover),
+.container-contact:hover > :not(:hover) {
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 990px) {
